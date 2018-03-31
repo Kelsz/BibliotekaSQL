@@ -1,4 +1,4 @@
-BibliotekaSQL jest relacyjn¹ baz¹ danych posiadaj¹ rzeczywiste informacje o stanie ksi¹¿ek bêd¹cych w moim posiadaniu. 
+BibliotekaSQL jest relacyjn¹ baz¹ danych posiadaj¹c¹ rzeczywiste informacje o stanie ksi¹¿ek bêd¹cych w moim posiadaniu. 
 Póki co zawiera trzy tabele z informacjami o autorach (tabela autor), tytu³ach ksia¿ek (tabela ksiazka) oraz trzeci¹ (tabela autor_ksiazka) bêd¹c¹ tabel¹ poœredni¹, która tworzy relacjê wiele-do-wielu pomiêdzy tabelami autor i ksiazka. Wartoœci pól id_autor oraz id_ksiazka w tabeli autor_ksiazka s¹ zmi¹zane kluczami obcymi z odpowiednimi polami w tabelach autor i ksiazka.
 
 Dane zosta³y odpowiednio przygotowane w Exelu, a nastêpnie przy u¿yciu komendy:
