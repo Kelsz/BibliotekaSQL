@@ -1,0 +1,36 @@
+Maj¹c cztery tabele (opisane w pliku README.txt) mo¿na ju¿ pokuciœ siê o kilka ciekawych zapytañ. Zacznijmy od czegoœ prostego:
+
+1. Ile wynosi suma stron wszystkich przeczytanych ksi¹¿ek?
+
+SELECT SUM(ilosc_stron) AS suma_stron FROM przeczytane
+WHERE data_zakonczenia IS NOT NULL;
+
+Rezultat:
+24710
+
+2. Czy s¹ jakieœ ksi¹¿ki, które nie zosta³y do koñca przeczytane?
+
+SELECT k.tytul, p.data_rozpoczecia, p.data_zakonczenia, p.ilosc_stron
+FROM ksiazka AS k, przeczytane AS p
+WHERE k.id_ksiazka = p.id_ksiazka
+AND data_zakonczenia IS NULL;
+
+Rezultat:
+Handlarz ksi¹g przeklêtych	2018-03-18	NULL	355
+
+3. Jakie s¹ nazwiska autorów których posiadam wiêcej ni¿ piêæ tytu³ów ksi¹¿ek?
+
+SELECT a.nazwisko || " " || a.imie AS Autor, COUNT(*) AS Ilosc_ksiazek
+FROM autor_ksiazka AS ak, autor AS a
+WHERE ak.id_autor = a.id_autor
+GROUP BY Autor
+HAVING COUNT(*) > 5 
+ORDER BY Ilosc_ksiazek DESC;
+
+Rezultat:
+Lackberg Camilla	11
+Nesbo Jo	        11
+Bolton Sharon	        9
+King Stephen	        9
+Eriksson Kjell	        8
+Beckett Simon	        7
