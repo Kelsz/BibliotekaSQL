@@ -28,6 +28,7 @@ HAVING COUNT(*) > 5
 ORDER BY Ilosc_ksiazek DESC;
 
 Rezultat:
+Morrell David	        15
 Lackberg Camilla	11
 Nesbo Jo	        11
 Bolton Sharon	        9

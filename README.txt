@@ -1,10 +1,11 @@
 BibliotekaSQL jest relacyjn¹ baz¹ danych posiadaj¹c¹ rzeczywiste informacje o stanie ksi¹¿ek bêd¹cych w moim posiadaniu. 
-Zawiera cztery tabele z informacjami: 
+Zawiera nastêpuj¹ce tabele z informacjami: 
 * o autorach (tabela autor), 
 * tytu³ach ksia¿ek (tabela ksiazka),
 * trzeci¹ (tabela autor_ksiazka) bêd¹c¹ tabel¹ poœredni¹, która tworzy relacjê wiele-do-wielu pomiêdzy tabelami autor i ksiazka
-* a tak¿e czwart¹ (tabela przeczytane) bêd¹c¹ w relacji z tabel¹ ksi¹¿ka zawieraj¹c¹ listê przeczytanych ksi¹¿ek (info o dacie rozpoczêcia i zakoñczenia czytania oraz liczbê stron). 
-Wartoœci pól id_autor oraz id_ksiazka w tabeli autor_ksiazka s¹ zmi¹zane kluczami obcymi z odpowiednimi polami w tabelach autor i ksiazka; podobnie wartoœci z pó³ id_ksiazka w tabeli przeczytane do klucze obce powi¹zane z polami w tabeli ksiazka.
+*czwart¹ (tabela przeczytane) bêd¹c¹ w relacji z tabel¹ ksi¹¿ka zawieraj¹c¹ listê przeczytanych ksi¹¿ek (info o dacie rozpoczêcia i zakoñczenia czytania oraz liczbê stron),
+*o wydawnictwach (tabela wydawnictwo) zawieraj¹c¹ spis wydawnictw. 
+Wartoœci pól id_autor oraz id_ksiazka w tabeli autor_ksiazka s¹ zwi¹zane kluczami obcymi z odpowiednimi polami w tabelach autor i ksiazka; podobnie wartoœci z pól id_ksiazka w tabeli przeczytane do klucze obce powi¹zane z polami w tabeli ksiazka. Podobne powi¹zania istniej¹ te¿ w innych tabelach.
 
 Dane zosta³y odpowiednio przygotowane w Exelu, a nastêpnie przy u¿yciu komendy:
 
